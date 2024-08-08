@@ -48,21 +48,12 @@ using namespace llvm;
  *                                                                            *
  ******************************************************************************/
 
-bool AdiakPass::skipModule(Module &m) const {
-	auto adiak = m.getFunction("adiak_init");
-	if (adiak) {
-		return false;
-	}
-	return true;
-}
 
 bool AdiakPass::runOnModule(Module &m)
 {
 
 	LLVMContext &context = m.getContext();
-	llvm::errs() << "Context address: " << &context << "\n";
-	Type *int8ptr = Type::getInt8PtrTy(context);
-	llvm::errs() << "Type created: " << int8ptr << "\n";
+	outs () << "In adiak module.. \n";
 	// Type *int32Type = Type::getInt32Ty(getGlobalContext());
 	// Type *voidType = Type::getVoidTy(getGlobalContext());
 	

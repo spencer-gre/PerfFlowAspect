@@ -27,7 +27,6 @@ public:
     static char ID;
     AdiakPass () : ModulePass (ID) {}
     virtual bool runOnModule (Module &M);
-	bool skipModule(Module &M) const;
 
 private:
 

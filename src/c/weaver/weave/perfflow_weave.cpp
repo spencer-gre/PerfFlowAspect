@@ -29,7 +29,6 @@
 #include <stdio.h>
 #include <sys/time.h>
 #include <time.h>
-#include <adiak_tool.h>
 #define UNUSED(x) (void)(x)
 
 using namespace llvm;
