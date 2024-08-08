@@ -1,6 +1,7 @@
 add_library(WeavePass MODULE
     # List your source files here.
     perfflow_weave.cpp
+    perfflow_weave_adiak.cpp
 )
 
 # Use C++11 to compile our pass (i.e., supply -std=c++11).
