@@ -54,3 +54,37 @@ Adiak's metadata can only be displayed in the object format of a PerfFlowAspect
 .. code:: bash
 
    PERFFLOW_OPTIONS="log-format=Object" ./smoketest
+
+**********************
+ Output Demonstration
+**********************
+
+The following is a snippet of running the CUDA smoketest on LLNL's Matrix
+Cluster. The Adiak metadata appears in the Chrome Trace Format otherData
+section.
+
+.. code:: json
+
+   {
+   "displayTimeUnit": "us",
+   "otherData": {
+      "walltime": {"tv_sec": 0, "tv_usec": 903734},
+      "systime": {"tv_sec": 0, "tv_usec": 370000},
+      "cputime": {"tv_sec": 0, "tv_usec": 40000},
+      "numhosts": 1,
+      "jobsize": 1,
+      "cluster": "matrix",
+      "hostname": "matrix10",
+      "working_directory": "/g/g14/greene36/PerfFlowAspect/src/c/build/test",
+      "executablepath": "/g/g14/greene36/PerfFlowAspect/src/c/build/test/smoketest_cuda",
+      "executable": "smoketest_cuda",
+      "launchday": 1761091200,
+      "launchdate": 1761148496,
+      "uid": "Spencer Greene",
+      "user": "greene36",
+      "adiakversion": "0.4.1"
+
+   },
+   "traceEvents": [
+   {"name": "main", "cat": "/g/g14/greene36/PerfFlowAspect/src/c/test/smoketest_cuda_wrapper.cpp", "pid": 3220242, "tid": 3220242, "ts": 1761148496078466.0, "ph": "B"},
+   {"name": "main", "cat": "/g/g14/greene36/PerfFlowAspect/src/c/test/smoketest_cuda_wrapper.cpp", "pid": 3220242, "tid": 3220242, "ts": 1761148496968874.0, "ph": "E"}, ...
